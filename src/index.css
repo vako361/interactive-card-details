@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --font-family-space-grotesk: "Space Grotesk", sans-serif;
+}
 *{
   box-sizing: border-box;
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-family-space-grotesk);
   padding: 0;
 
 }
@@ -32,7 +35,7 @@ body {
   padding-bottom: 17px;
   width: 239px;
  color: var(--White, #FFF);
- font-family: "Space Grotesk";
+ font-family: var(--font-family-space-grotesk);
  font-size: 18px;
  font-style: normal;
  font-weight: 500;
@@ -50,4 +53,19 @@ body {
 #r-card{
   margin-top: 35px;
   margin-right: 16px;
+}
+#in{
+  text-align: center;
+  border-radius: 8px;
+  border:1px solid var(--Light-Grey, #DFDEE0) ;
+}
+#inp{
+  text-align: center;
+  border-radius: 8px;
+  border:1px solid var(--Light-Grey, #DFDEE0) ;
+}
+#inpu{
+  text-align: center;
+  border-radius: 8px;
+  border:1px solid var(--Light-Grey, #DFDEE0) ;
 }

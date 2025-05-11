@@ -12,6 +12,11 @@ justify-content: center;
 position: absolute;
 top: 126px;
 left: 17px;
+@media (min-width: 1024px) {
+ left: 130px;
+ top: 187px;
+
+}
   `
 export const Input = styled.input`
 width: 327px;

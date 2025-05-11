@@ -33,7 +33,7 @@ body {
   font-size: 18px;
   height: 30px;
   padding-bottom: 17px;
-  width: 239px;
+  width: 260px;
  color: var(--White, #FFF);
  font-family: var(--font-family-space-grotesk);
  font-size: 18px;
@@ -68,4 +68,10 @@ body {
   text-align: center;
   border-radius: 8px;
   border:1px solid var(--Light-Grey, #DFDEE0) ;
+}
+@media(min-width:1024px){
+ #r-card{
+  margin-top: 180px;
+  margin-left: 330px;
+ }
 }

@@ -5,7 +5,8 @@ import './App.css'
 function App() {
 
    return (
-   <div className='h-screen w-screen flex flex-col items-center justify-center'>
+   <div className='h-screen w-screen flex flex-col items-center justify-center
+   lg:flex-row lg:justify-around '>
     <Interface />
     <Veryfy />
    </div>

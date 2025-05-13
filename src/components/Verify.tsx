@@ -8,15 +8,19 @@ interface Props {
   setInput: React.Dispatch<React.SetStateAction<InputState>>;
   validation: ValidationState;
   setValidation: React.Dispatch<React.SetStateAction<ValidationState>>;
+  submitted: boolean;
+  setSubmitted: React.Dispatch<React.SetStateAction<boolean>>
 }
-const Verify: React.FC<Props> = ({ input, setInput, validation, setValidation }) => {
+const Verify: React.FC<Props> = ({ input, setInput, validation, setValidation, setSubmitted, submitted}) => {
   const handleClick = () => {
     const isCardHolderValid = input.cardHolder.trim() !== "";
     const isCardNumberValid = !isNaN(input.cardNumber ?? 0) && String(input.cardNumber ?? "").trim().length === 16;
     const isExpMonthValid = input.expMonth != null && input.expMonth > 0 && input.expMonth <= 12;
     const isExpYearValid = input.expYear !== 0;
     const isCvcValid = String(input.cvc).trim().length === 3;
-
+   if (isCardHolderValid && isCardNumberValid && isExpMonthValid && isExpYearValid && isCvcValid) {
+      setSubmitted(true);
+    }
     setValidation((prevValidation) => ({
       ...prevValidation,
       cardHolder: isCardHolderValid,

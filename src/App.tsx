@@ -2,6 +2,7 @@ import Interface from './components/Interface';
 import './App.css';
 import { useState } from 'react';
 import Verify from './components/Verify';
+import Sumbited from './components/Submited';
 
 export interface InputState {
   cardNumber: number | null;
@@ -26,6 +27,7 @@ function App() {
     expYear: null,
     cvc: null,
   });
+  const [submitted, setSubmitted] = useState<boolean>(false);
   const [validation, setValidation] = useState<ValidationState>({
     cardNumber: true,
     cardHolder: true,
@@ -36,9 +38,11 @@ function App() {
 
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center lg:flex-row lg:justify-around">
+    <div className="h-screen w-screen flex flex-col items-center justify-center lg:flex-row lg:justify-between">
       <Interface input={input} setInput={setInput} validation={validation} setValidation={setValidation} />
-      <Verify input={input} setInput={setInput} validation={validation} setValidation={setValidation}/>
+     {!submitted && <Verify input={input} setInput={setInput} validation={validation} setValidation={setValidation} 
+      submitted={submitted} setSubmitted={setSubmitted} />}
+     {submitted && <Sumbited />}
     </div>
   );
 }

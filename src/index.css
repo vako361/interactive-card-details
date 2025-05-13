@@ -75,3 +75,18 @@ body {
   margin-left: 330px;
  }
 }
+/* @media(min-width:1024px){
+#cvc{
+  position: absolute;
+  top: 73%;
+  left: 150%;
+}
+}
+#cvc{
+
+} */
+#rectangle{
+  margin-top: 15px;
+  text-align: end;
+  padding-right: 5px;
+}

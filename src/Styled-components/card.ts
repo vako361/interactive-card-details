@@ -26,3 +26,14 @@ border: 1px solid var(--Light-Grey, #DFDEE0);
 background: var(--White, #FFF);
 padding-left: 16px;
 `
+export const R = styled.div`
+width: 286px;
+height: 157px;
+border-radius: 10px;
+background: linear-gradient(169deg, #FFF 5%, #D2D3D9 91.69%);
+padding-top: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+`

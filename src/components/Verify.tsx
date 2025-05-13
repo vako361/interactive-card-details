@@ -11,7 +11,7 @@ interface Props {
   submitted: boolean;
   setSubmitted: React.Dispatch<React.SetStateAction<boolean>>
 }
-const Verify: React.FC<Props> = ({ input, setInput, validation, setValidation, setSubmitted, submitted}) => {
+const Verify: React.FC<Props> = ({ input, setInput, validation, setValidation, setSubmitted}) => {
   const handleClick = () => {
     const isCardHolderValid = input.cardHolder.trim() !== "";
     const isCardNumberValid = !isNaN(input.cardNumber ?? 0) && String(input.cardNumber ?? "").trim().length === 16;

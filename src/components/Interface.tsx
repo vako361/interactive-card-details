@@ -10,7 +10,7 @@ interface InterfaceProps {
   setValidation: React.Dispatch<React.SetStateAction<ValidationState>>;
 }
 
-const Interface: React.FC<InterfaceProps> = ({ input, validation, setValidation }) => {
+const Interface: React.FC<InterfaceProps> = ({ input }) => {
   return (
     <div className="flex w-full h-[240px] flex-col relative items-center bg-[url('/images/bg-main-mobile.png')] justify-center
          lg:w-[500px] lg:h-screen lg:self-start lg:bg-[url('/images/bg-main-desktop.png')] lg:bg-cover lg:bg-no-repeat lg:justify-around">

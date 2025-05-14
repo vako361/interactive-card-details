@@ -46,7 +46,7 @@ return (
         <input
           className="w-full"
           placeholder="e.g. 1234 5678 9123 0000"
-          onChange={(e) => setInput({ ...input, cardNumber: parseInt(e.target.value) || 0 })}
+    onChange={(e) => setInput({ ...input, cardNumber: parseInt(e.target.value.replace(/\s/g, "")) || 0 })}
         />
         {!validation.cardNumber ? <span className="text-[12px] font-[500] text-[#FF5050]">Wrong format, numbers only</span> : null}
       </div>
